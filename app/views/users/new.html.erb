@@ -1,0 +1,29 @@
+<div class="container-fluid">
+<section>
+        <h1>CREAR USUARIO</h1>
+        <%= link_to "VOLVER", users_path ,class:'btn btn-primary' %>
+</section>
+<div class="container">
+<%= form_for  @users do |f| %>
+    <div class="form-group">
+        <%= f.label :name,"NOMBRE:" %>
+        <%= f.text_field :name,class:"form-control" %>
+    </div>
+    <div class="form-group">
+        <%= f.label :surname,"APELLIDO:" %>
+        <%= f.text_field :surname,class:"form-control"%>
+    </div>
+    <div class="form-group">
+        <%= f.label :document,"DOCUMENTO" %>
+        <%= f.text_field :document,class:"form-control" %>
+    </div>
+    <div class="form-group">
+        <%= f.label :phone ,"TELÉFONO"%>
+        <%= f.number_field :phone,class:"form-control" %>
+    </div>
+    <div>
+        <%= f.submit 'CREAR USUARIO', :class =>'btn btn-info' %>
+    </div>
+    <% end %>
+</div>
+</div>
