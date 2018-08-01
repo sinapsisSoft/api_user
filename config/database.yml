@@ -23,7 +23,7 @@ test:
 production:
   <<: *default
   #database: db/production.sqlite3
-  database: example_production
+  database: example_user
   adapter: postgresql
-  host: localhost
-  password:
+  pool: 5
+  timeout: 5000
